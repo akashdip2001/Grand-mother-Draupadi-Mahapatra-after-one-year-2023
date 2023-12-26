@@ -93,8 +93,8 @@ body {
 /* Bottom Text */
 .bottom-text {
   position: fixed;
-  bottom: 5px;
-  left: 8px;
+  bottom: 20px;
+  left: 20px;
   color: white;
 }
 
@@ -115,6 +115,10 @@ body {
     gap: 15px;
     margin: 10px;
   }
+
+  .bottom-text {
+    bottom: 5px;
+    left: 8px;
 }
 
 /* Media Query for Smallest Tablets and Portrait View */
@@ -124,6 +128,10 @@ body {
     gap: 15px;
     margin: 10px;
   }
+
+  .bottom-text {
+    bottom: 5px;
+    left: 8px;
 }
 
 /* Media Query for Tablets */
@@ -138,6 +146,10 @@ body {
     /* Adjust the size of the images for tablets */
     width: 100%;
   }
+
+  .bottom-text {
+    bottom: 5px;
+    left: 8px;
 }
 
 /* Media Query for Mobile */
@@ -150,4 +162,8 @@ body {
   .top-image {
     max-height: 60vh;
   }
+
+  .bottom-text {
+    bottom: 5px;
+    left: 8px;
 }
