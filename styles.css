@@ -90,7 +90,22 @@ body {
   background-color: #45a049;
 }
 
-/* Add animations and styles for the background animations (carsar movement and wave animation) */
+/* Bottom Text */
+.bottom-text {
+  position: fixed;
+  bottom: 5px;
+  left: 8px;
+  color: white;
+}
+
+.bottom-text p {
+  margin: 0; /* Remove default margin */
+}
+
+.bottom-text a {
+  color: white;
+  text-decoration: underline;
+}
 
 
 /* Media Query for Smaller Tablets */
