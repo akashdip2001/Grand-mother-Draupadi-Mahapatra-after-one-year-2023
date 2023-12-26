@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #640661, #333333);
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-image {
+  width: 100%;
+  max-height: 85vh;
+  /* overflow: hidden; */
+}
+
+.top-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Adjust based on your layout */
+  gap: 10px;
+  margin: 10px;
+  margin: 10px 30px;
+}
+
+.gallery-image {
+  width: 100%;
+  border: 2px solid white; /* Thin white margin */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 1:1 aspect ratio */
+
+/* .square-image {
+  height: 0;
+  padding-bottom: 100%; 
+} */
+
+.enlarged {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enlarged img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.back-button {
+  background-color: rgb(186, 205, 220);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/* Clickable Button */
+.clickable-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ce2675;
+  color: white;
+  padding: 15px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none; /* Remove default underline for links */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clickable-button:hover {
+  background-color: #45a049;
+}
+
+/* Add animations and styles for the background animations (carsar movement and wave animation) */
+
+
+/* Media Query for Smaller Tablets */
+@media only screen and (max-width: 820px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 10px;
+  }
+}
+
+/* Media Query for Smallest Tablets and Portrait View */
+@media only screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin: 10px;
+  }
+}
+
+/* Media Query for Tablets */
+@media only screen and (max-width: 1400px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 10px;
+  }
+
+  .gallery-image {
+    /* Adjust the size of the images for tablets */
+    width: 100%;
+  }
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    margin: 10px 10px;
+  }
+
+  .top-image {
+    max-height: 60vh;
+  }
+}
